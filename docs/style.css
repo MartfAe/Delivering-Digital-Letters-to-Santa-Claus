@@ -223,15 +223,15 @@ button:hover { background: #b92b30; }
    8. GERENCIAMENTO DE FUNDOS
    ========================================= */
 body.fundo-capa {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('Image/fundoCarta.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('Image/fundoCarta.webp');
   background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;
 }
 body.fundo-correio {
-  background-image: url('Image/fundo.png');
+  background-image: url('Image/fundo.webp');
   background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;
 }
 body.fundo-elfo {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('Image/fundo2.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('Image/fundo2.webp');
   background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;
 }
 
@@ -253,7 +253,7 @@ body.fundo-elfo {
   top: -50px;
   z-index: 1;
   pointer-events: none;
-  background-image: url('Image/carta.png');
+  background-image: url('Image/carta.webp');
   background-size: contain; background-repeat: no-repeat; background-position: center;
   opacity: 0.8;
   animation: cairCartas linear infinite;
