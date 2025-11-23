@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: url('Image/fundo.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* --- TÍTULOS E TEXTOS --- */
+h2 {
+  font-family: 'Mountains of Christmas', cursive;
+  font-weight: 700; 
+  font-size: 38px;  
+  color: #A61C24;   
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #444;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* --- INPUTS E BOTÕES --- */
+input, textarea {
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+  padding: 10px;
+  margin-top: 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: #D63338;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+
+button:hover {
+  background: #b92b30; /* Um efeitinho extra para quando passar o mouse */
+}
+
+/* --- ESTRUTURA DO FORMULÁRIO (CAIXA PRINCIPAL) --- */
+.container {
+  max-width: 700px;
+  width: 95%;
+  margin: 60px auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 30px 50px 30px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00000060;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  align-items: flex-end;
+}
+
+/* --- COLUNAS --- */
+.col-larga { flex: 4; }
+.col-media { flex: 3; }
+.col-curta { flex: 2; min-width: 100px; }
+
+/* Ajuste para Celular */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  label {
+    margin-top: 15px;
+  }
+}
+
+/* --- PERSONAGENS (PAPAI NOEL, PLACA, ELFO) --- */
+
+/* Papai Noel parado */
+#santa {
+  position: fixed;
+  bottom: 5px;
+  right: -15px;
+  width: 410px;
+  z-index: 3;
+}
+
+/* Placa na Esquerda */
+#placa {
+  position: fixed;
+  bottom: 0;
+  left: -10px; /* CORRIGIDO: Adicionado 'px' */
+  width: 410px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Elfo da página de confirmação */
+#elfo {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  width: 450px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Responsividade dos Personagens */
+@media (max-width: 1300px) {
+  #placa { display: none; }
+}
+
+@media (max-width: 900px) {
+  #elfo {
+    width: 180px;
+    right: -20px;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 800px) {
+  #santa {
+    width: 200px;
+    right: -50px;
+  }
+}
+
+/* --- NEVE --- */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  font-size: 30px;
+  color: white;
+  animation: cair linear infinite;
+  z-index: 1;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* --- PÁGINA DE CONFIRMAÇÃO (Limpei as duplicatas aqui) --- */
+
+.confirmacao-box {
+  text-align: center;
+  max-width: 600px;
+  /* Usei o margin do container principal para manter consistência */
+  margin: 60px auto; 
+  background: rgba(255, 255, 255, 0.9); /* Fundo um pouco mais branco para leitura */
+  padding: 40px;
+}
+
+.mensagem-sucesso p {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #A61C24;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-voltar:hover {
+  background-color: #8C1218;
+}
+
+/* Fundo Especial da Confirmação */
+body.fundoElfo {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+  url('Image/fundo2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
