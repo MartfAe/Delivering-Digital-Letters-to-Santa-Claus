@@ -230,7 +230,7 @@ body.fundo-correio {
   background-image: url('Image/fundo.png');
   background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;
 }
-body.fundoElfo {
+body.fundo-elfo {
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('Image/fundo2.png');
   background-size: cover; background-position: center; background-attachment: fixed; background-repeat: no-repeat;
 }
